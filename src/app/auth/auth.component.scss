@@ -1,0 +1,67 @@
+.auth-component {
+  width: 100vw;
+  height: 100vh;
+
+  .container {
+    background-color: #3e3b47;
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    .left-section {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 45vw;
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        .form-field {
+          align-items: center;
+          background-color: #232129;
+          border: none;
+          border-radius: 8px;
+          display: flex;
+          height: 56px;
+          margin-bottom: 10px;
+          padding: 15px;
+          width: 340px;
+
+          input {
+            background-color: inherit;
+            border: inherit;
+            color: #fff;
+          }
+
+          .ng-fa-icon {
+            color: #666360;
+            margin-right: 10px;
+          }
+        }
+
+        button {
+          background-color: #ff1493;
+          border: none;
+          border-radius: 8px;
+          color: #fff;
+          height: 56px;
+          transition: 0.3s;
+
+          &:hover {
+            background-color: lighten(#ff1493, 10)
+          }
+        }
+      }
+    }
+
+    .right-section {
+      img {
+        width: 55vw;
+        height: 100%;
+      }
+    }
+  }
+}
