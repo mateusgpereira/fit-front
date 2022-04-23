@@ -8,6 +8,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 import { environment } from 'src/environments/environment'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
+import { httpInterceptorsProviders } from './http-interceptors'
+import { LoadingModule } from './loading/loading.module'
 import { appReducer, effects } from './store/state'
 
 @NgModule({
@@ -16,12 +18,13 @@ import { appReducer, effects } from './store/state'
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    LoadingModule,
     StoreModule.forRoot(appReducer),
     EffectsModule.forRoot(effects),
     StoreDevtoolsModule.instrument({ logOnly: environment.production }),
     StoreRouterConnectingModule.forRoot()
   ],
-  providers: [],
+  providers: [httpInterceptorsProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
