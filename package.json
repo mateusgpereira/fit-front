@@ -28,6 +28,7 @@
     "@ngrx/router-store": "^13.0.2",
     "@ngrx/store": "^13.0.2",
     "@ngrx/store-devtools": "^13.0.2",
+    "jest-preset-angular": "^11.1.1",
     "ngx-loading": "^13.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
