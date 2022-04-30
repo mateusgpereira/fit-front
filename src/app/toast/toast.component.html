@@ -1,0 +1,5 @@
+<div @flyInOutLeft *ngIf="show" class="toast-box {{ type }}">
+  <fa-icon [icon]="icons[type]"></fa-icon>
+  <p>{{ message }}</p>
+  <fa-icon [icon]="closeIcon" class="close-icon" (click)="onCloseClick()"></fa-icon>
+</div>
