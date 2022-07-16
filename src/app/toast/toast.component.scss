@@ -5,12 +5,13 @@ $error: #990000;
 
 .toast-box {
   align-items: center;
-  background-color: #fff;
+  background-color: #FFF;
   border-left: 6px solid $info;
   border-radius: 4px;
   display: flex;
   height: 80px;
   justify-content: space-between;
+  opacity: 0.9;
   padding: 5px 10px;
   position: absolute;
   right: 50px;

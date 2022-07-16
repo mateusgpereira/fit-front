@@ -16,6 +16,13 @@ export class ToastService {
     })
   }
 
+  showToastWithTimeout(message: string, type: ToastType, timeoutMs: number): void {
+    this.showToast(message, type)
+    setTimeout(() => {
+      this.hide()
+    }, timeoutMs)
+  }
+
   hide(): void {
     this.toast.next({
       message: '',
