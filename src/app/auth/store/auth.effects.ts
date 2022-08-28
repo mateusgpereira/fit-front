@@ -29,7 +29,7 @@ export class AuthEffects {
         ofType(login),
         tap((resData) => {
           if (resData.token) {
-            this.authSuccess(resData)
+            this.authSuccess(resData, 'home')
           }
         })
       ),

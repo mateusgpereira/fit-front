@@ -12,10 +12,11 @@ import { AppComponent } from './app.component'
 import { httpInterceptorsProviders } from './http-interceptors'
 import { LoadingModule } from './loading/loading.module'
 import { appReducer, effects } from './store/state'
-import { ToastModule } from './toast/toast.module'
+import { ToastModule } from './toast/toast.module';
+import { HomeComponent } from './home/home.component'
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
