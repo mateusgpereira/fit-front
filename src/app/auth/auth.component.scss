@@ -2,7 +2,6 @@ $pink: #df0697;
 
 .auth-component {
   width: 100%;
-  height: 100vh;
 
   min-height: 560px;
 
@@ -90,8 +89,9 @@ $pink: #df0697;
 
     .right-section {
       img {
-        width: 55vw;
+        display: block;
         height: 100%;
+        width: 55vw;
       }
     }
   }
