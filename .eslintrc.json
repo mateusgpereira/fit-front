@@ -1,76 +1,107 @@
 {
-  "root": true,
-  "ignorePatterns": [
-    "projects/**/*"
-  ],
-  "overrides": [
-    {
-      "files": [
-        "*.ts"
-      ],
-      "parserOptions": {
-        "project": [
-          "tsconfig.json"
-        ],
-        "createDefaultProgram": true
-      },
-      "extends": [
-        "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates",
-        "airbnb-base",
-        "airbnb-typescript/base",
-        "plugin:prettier/recommended"
-      ],
-      "rules": {
-        "@angular-eslint/directive-selector": [
-          "error",
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "overrides": [
+        {
+            "files": [
+              "*.ts"
+            ],
+            "parserOptions": {
+              "project": [
+                "tsconfig.json"
+              ],
+              "createDefaultProgram": true
+            },
+            "extends": [
+              "plugin:@angular-eslint/recommended",
+              "plugin:@angular-eslint/template/process-inline-templates",
+              "airbnb-base",
+              "airbnb-typescript/base",
+              "plugin:prettier/recommended"
+            ],
+            "rules": {
+              "@angular-eslint/directive-selector": [
+                "error",
+                {
+                  "type": "attribute",
+                  "prefix": "app",
+                  "style": "camelCase"
+                }
+              ],
+              "@angular-eslint/component-selector": [
+                "error",
+                {
+                  "type": "element",
+                  "prefix": "app",
+                  "style": "kebab-case"
+                }
+              ],
+              "semi": [
+                "error",
+                "never"
+              ],
+              "@typescript-eslint/semi": "off",
+              "@typescript-eslint/comma-dangle": "off",
+              "import/no-unresolved": "off",
+              "import/prefer-default-export": "off",
+              "class-methods-use-this": "off",
+              "no-underscore-dangle": "off",
+              "@ngrx/no-typed-global-store": "off",
+              "prefer-destructuring": [
+                "error",
+                {
+                  "AssignmentExpression": {
+                    "array": false,
+                    "object": true
+                  }
+                }
+              ],
+              "no-unused-vars": "off",
+              "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+              "@typescript-eslint/no-explicit-any": "off"
+            }
+          },
           {
-            "type": "attribute",
-            "prefix": "app",
-            "style": "camelCase"
+            "files": [
+              "*.html"
+            ],
+            "extends": [
+              "plugin:@angular-eslint/template/recommended",
+              "plugin:prettier/recommended"
+            ],
+            "rules": {}
           }
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            4
         ],
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "prefix": "app",
-            "style": "kebab-case"
-          }
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
         ],
         "semi": [
-          "error",
-          "never"
-        ],
-        "@typescript-eslint/semi": "off",
-        "@typescript-eslint/comma-dangle": "off",
-        "import/no-unresolved": "off",
-        "import/prefer-default-export": "off",
-        "class-methods-use-this": "off",
-        "no-underscore-dangle": "off",
-        "@ngrx/no-typed-global-store": "off",
-        "prefer-destructuring": [
-          "error",
-          {
-            "AssignmentExpression": {
-              "array": false,
-              "object": true
-            }
-          }
-        ],
-        "no-unused-vars": "off",
-        "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
-      }
-    },
-    {
-      "files": [
-        "*.html"
-      ],
-      "extends": [
-        "plugin:@angular-eslint/template/recommended",
-        "plugin:prettier/recommended"
-      ],
-      "rules": {}
+            "error",
+            "never"
+        ]
     }
-  ]
 }

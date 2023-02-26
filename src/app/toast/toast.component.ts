@@ -22,7 +22,7 @@ export class ToastComponent implements OnInit, OnDestroy {
 
   show = false
 
-  message: string = ''
+  message = ''
 
   type: ToastType = 'info'
 

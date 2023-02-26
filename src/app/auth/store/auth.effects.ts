@@ -58,7 +58,7 @@ export class AuthEffects {
     private toastService: ToastService
   ) {}
 
-  private authSuccess(resData: ILoginResponseData, redirectTo: string = '/') {
+  private authSuccess(resData: ILoginResponseData, redirectTo = '/') {
     const { token } = resData
     localStorage.setItem('token', token)
     this.toastService.showToastWithTimeout(
