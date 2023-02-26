@@ -1,5 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import 'jest-preset-angular/setup-jest'
 
 /* general mocks for jsdom */
 const mock = () => {
